@@ -1,0 +1,473 @@
+body{
+    background-color: black;
+    color: white;
+    
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    
+}
+
+/* MODAL STYLING */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  color: white;
+  text-align: left;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#closeModal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+
+/*-------------------------Nav Bar -------------------------*/
+.main {
+    position: relative;
+    background: linear-gradient(135deg, #000000, #1a0000, #330000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38rem;
+    color: white;
+    overflow: hidden;
+   box-shadow: inset 10px 10px rgba(0, 0, 0, 0.5);
+   max-width: 1200px;  /* keeps content centered */
+  margin: 0 auto;     /* centers horizontally */
+  width: 100%;
+}
+
+
+
+
+
+.main-content,
+.nav {
+    position: relative;
+    z-index: 2;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+}
+.log-in-buttons{
+   display: flex;
+}
+#logo{
+  
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+    
+}
+.sign-in{
+    margin: 0.5rem;
+    padding: 0.3rem ;
+     height: 2.5rem;
+     width: 5rem;
+     background-color: #db0000;
+     color: white;
+     border-radius:0.3rem ;
+    
+}
+#language{
+    margin: 0.5rem;
+    padding: 0.3rem ;
+     height: 2.5rem;
+     width: 6rem;
+      border-radius:0.3rem ;
+      background-color: black;
+        color: white;
+        filter: brightness(1);
+}
+
+/**----------------------Main content ---------------------*/
+
+
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+#email{
+    margin: 0.5rem;
+    padding-left: 1rem;
+     height: 3rem;
+     width: 15rem;
+     background-color: black;
+     color: white;
+     border: 0.1px solid white;
+     border-radius:0.3rem ;
+     
+     font-size: 1rem;
+}
+.get-started{
+       margin: 0.5rem;
+    padding: 0.3rem ;
+     height: 3rem;
+     width: 8.5rem;
+     background-color: #db0000;
+     color: white;
+     border-radius:0.3rem ;
+    
+}
+
+h1{
+   
+    font-size: 3.5rem;
+    text-align: center;
+
+}
+h4{
+    font-weight: 400;
+    line-height: 1.4rem;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+
+/**---------------------trending---------------------*/
+
+.trending,.top-rated,.action,.comedy,.romance{
+  height: 23rem;
+}
+
+.trending,.top-rated,.action,.comedy,.romance {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.trending-slider,.top-slider,.action-slider,.comedy-slider,.romance-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* remove overflow: hidden; */
+}
+
+.trending-content,.top-content,.action-content,.comedy-content,.romance-content {
+  display: flex;
+  justify-content: space-around;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0.5rem;
+  
+}
+
+
+/* Hide horizontal scrollbar for ALL rows */
+.trending-content,
+.top-content,
+.action-content,
+.comedy-content,
+.romance-content {
+  overflow-x: auto;      /* keep arrow scrolling */
+  overflow-y: hidden;    /* avoid vertical bar */
+  -ms-overflow-style: none;  /* IE/old Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Chrome/Safari */
+.trending-content::-webkit-scrollbar,
+.top-content::-webkit-scrollbar,
+.action-content::-webkit-scrollbar,
+.comedy-content::-webkit-scrollbar,
+.romance-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;     /* hides the grey line */
+}
+
+
+
+.trending-item,.top-item,.action-item,.comedy-item,.romance-item {
+  min-width: 12.5rem;  /* force items to take space */
+  flex-shrink: 0;    /* prevent shrinking */
+}
+
+
+.img {
+  height: 17rem;
+  width: 12rem;
+  border-radius: 0.3rem;
+}
+
+.img:hover{
+  height: 17.2rem;
+  width: 12.2rem;
+  border:1px solid white;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+.arrow.right {
+  right: 10px;
+}
+
+.slider-content {
+  overflow-x: hidden;      /* hide scrollbar completely */
+  scroll-behavior: smooth; /* keep smooth scrolling */
+  display: flex;
+}
+
+.slider-content::-webkit-scrollbar {
+  display: none;           /* Chrome, Safari */
+}
+
+.slider-content {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+
+
+/*------------------More Reasins-------------------------*/
+.more-reason{
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+}
+
+.reson-container{
+    display: flex;
+    width: 100%;
+   justify-content: space-around;
+    
+}
+.reasons{
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c0f3a 50%, #0b032d 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.reasons1{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-right: 1rem;
+  justify-content: space-around;
+}
+.reasons2{
+    display: flex;
+      width: 50%;
+      justify-content: space-evenly;
+}
+
+
+
+
+/*------------------Frequently Asked Questions-------------------------*/
+
+.frequenty-asked{
+  height: 50rem;
+
+}
+.faqAnswer {
+  display: none;
+}
+
+.faqAnswer.show {
+  display: block;
+}
+
+.faqAnswer.hide {
+  display: none;
+}
+
+
+
+
+.faq-item > label{
+  font-size: large;
+}
+
+
+.faqAnswer{
+
+   background-color: rgb(51, 51, 51);
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border:1px solid #333;
+}
+
+/* Hide actual checkbox */
+.faq-none {
+  display: none;
+  
+}
+
+
+/* Hide answer by default */
+.faqAnswer {
+  display: none;
+}
+
+/* Show answer when checkbox checked */
+.faq-none:checked ~ .faqAnswer {
+  display: block;
+}
+
+.faq-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* pushes text left, icon right */
+  background-color: rgb(51, 51, 51);
+  padding: 1rem;
+  border: 3px solid black;
+}
+
+
+/*----------------------media query---------------------*/
+
+@media  (min-width:750px) and (max-width: 1272px){
+  body{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+ .reson-container{
+  flex-direction: column;
+ }
+ .reasons1{
+  width: 100%;
+ }
+ .reasons2{
+  width: 100%;
+  margin-top:2rem;
+ }
+ .reasons{
+  width: 100%;
+ }
+ .more-reason{
+  height: 30rem;
+ }
+ 
+}
+
+@media (max-width:750px){
+
+  .email-input{
+    flex-direction: column;
+    text-align: center;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h4{
+    line-height: 1.5rem;
+  }
+  body{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .more-reason{
+    height: 55rem;
+    margin-top: 1rem;
+  }
+  .reson-container{
+     flex-direction: column;
+    width: 100%;
+  }
+
+  .reasons1,.reasons2,.reasons{
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+   
+  }
+ 
+
+  /* Adjust container layout */
+ 
+
+  
+  .trending-item,
+  .top-item,
+  .action-item,
+  .comedy-item,
+  .romance-item {
+    min-width: 8.5rem;   /* smaller width to reduce gap */
+    margin-right: 2rem; /* tiny spacing between items */
+  }
+
+  .trending-content,
+  .top-content,
+  .action-content,
+  .comedy-content,
+  .romance-content {
+    gap: 0; /* disable big gap */
+  }
+
+
+  /* Image styling */
+  .img {
+    height: 10rem;
+    width: 8rem;
+    border-radius: 0.3rem;
+    margin: 0; /* remove extra margin */
+  }
+
+  .img:hover{
+    height: 10.5rem;
+    width: 8.5rem;
+    border:1px solid white;
+    transition: 500ms;
+  }
+
+  .trending,.top-rated,.action,.comedy,.romance{
+    height: 17rem;
+  }
+}
