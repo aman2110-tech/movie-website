@@ -2,7 +2,7 @@
 const moviesData = [
   {
     title: "Wednesday",
-    image: "images/wednesdayLogo.webp",
+    image: "wednesdayLogo.webp",
     year: 2022,
     genre: "Mystery, Fantasy, Comedy",
     description: "Wednesday Addams joins Nevermore Academy and uncovers dark secrets about her family and the school."
@@ -260,3 +260,4 @@ const moviesData = [
     description: "A woman discovers her boyfriend is from one of Asia’s richest families."
   }
 ];
+
